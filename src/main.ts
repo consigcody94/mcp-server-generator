@@ -1,6 +1,6 @@
 import { Actor } from 'apify';
 import { log } from 'crawlee';
-import * as SwaggerParser from 'swagger-parser';
+import SwaggerParser from 'swagger-parser';
 import axios from 'axios';
 import Handlebars from 'handlebars';
 import yaml from 'js-yaml';
@@ -111,7 +111,7 @@ async function main() {
         }
 
         log.info('Validating and dereferencing OpenAPI spec');
-        const api = await (SwaggerParser as any).validate(openApiSpec);
+        const api = await SwaggerParser.validate(openApiSpec);
 
         log.info('OpenAPI spec validated', {
             title: api.info?.title,

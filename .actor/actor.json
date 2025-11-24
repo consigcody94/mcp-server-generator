@@ -6,12 +6,5 @@
   "version": "1.0.0",
   "input": "./input_schema.json",
   "dockerfile": "./Dockerfile",
-  "readme": "./README.md",
-  "storages": {
-    "keyValueStore": {
-      "actorSpecification": 1,
-      "title": "Generated MCP Server Code",
-      "description": "Complete MCP server code ready to deploy, including main server file, types, README, and package.json."
-    }
-  }
+  "readme": "./README.md"
 }

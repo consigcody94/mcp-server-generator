@@ -111,7 +111,8 @@ async function main() {
         }
 
         log.info('Validating and dereferencing OpenAPI spec');
-        const api = await SwaggerParser.validate(openApiSpec);
+        const parser = new (SwaggerParser as any)();
+        const api = await parser.validate(openApiSpec);
 
         log.info('OpenAPI spec validated', {
             title: api.info?.title,
